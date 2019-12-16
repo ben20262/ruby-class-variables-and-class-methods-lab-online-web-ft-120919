@@ -10,7 +10,7 @@ class Song
     @genre = genre
     @@song_count += 1
     @@song_genres << genre
-    @@song_artist << artist
+    @@song_artists << artist
   end
 
   def count
@@ -35,7 +35,7 @@ class Song
   end
 
   def artists
-    @@song_artist.uniq
+    @@song_artists.uniq
   end
 
   def artist_count
@@ -43,7 +43,7 @@ class Song
     unique = artists()
     unique.each do |s_artist|
       count = 0
-      @@song_genres.each do |song|
+      @@song_artists.each do |song|
         count += 1 if s_artist == song
       end
       artist_hash[s_artist] = count
