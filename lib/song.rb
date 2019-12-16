@@ -37,4 +37,17 @@ class Song
   def artists
     @artist.uniq
   end
+
+  def artist_count
+    artist_hash = {}
+    unique = artists()
+    unique.each do |s_artist|
+      count = 0
+      @@genres.each do |song|
+        count += 1 if s_artist == song
+      end
+      artist_hash[s_artist] = count
+    end
+    artist_hash
+  end
 end
