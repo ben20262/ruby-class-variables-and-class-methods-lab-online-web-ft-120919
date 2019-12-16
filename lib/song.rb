@@ -13,15 +13,15 @@ class Song
     @@artists << artist
   end
 
-  def count()
+  def self.count
     @@count
   end
 
-  def genres
+  def self.genres
     @@genres.uniq
   end
 
-  def genre_count
+  def self.genre_count
     genre_hash = {}
     unique = genres()
     unique.each do |s_genre|
@@ -34,11 +34,11 @@ class Song
     genre_hash
   end
 
-  def artists
+  def self.artists
     @@artists.uniq
   end
 
-  def artist_count
+  def self.artist_count
     artist_hash = {}
     unique = artists()
     unique.each do |s_artist|
