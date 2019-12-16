@@ -33,4 +33,8 @@ class Song
     end
     genre_hash
   end
+
+  def artists
+    @artist.uniq
+  end
 end
