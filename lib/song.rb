@@ -14,7 +14,7 @@ class Song
   end
 
   def count
-    @@song_count
+    @@count
   end
 
   def genres
